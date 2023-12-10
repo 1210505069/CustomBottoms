@@ -14,7 +14,13 @@ Programı test etmek için öncelikle programı çalıştırmanız gerekmektedir
 
 # CustomButtons kodu nasıl çalışır?
 CustomButtons uygulamasının kodu CustomButton ve ButtonControlPanel isimlik iki sınıftan oluşmaktadır. Temel olarak CustomButton sınıfında sınıf düğmelerinin özellikleri yönetilirken ButtonControlPanel sınıfında bu pencere oluşturulur ve düğmeler eklenir.
-CustomButton sınıfında üğmenin metnini, GraphQL şemasını, renklerini, simgelerini ve aktif olup olmadığını belirleyen değişkenler bulunmaktadır. CustomButton sınıfı aynı zamanda butona tıklandığında tetiklenen dinleyiciyi bulundurmaktadır. Tıklama ile birlikte tetikleyici butonun durumunu değiştirir ve ilgili GraphQL şemasını çalıştırır. 
+CustomButton sınıfında düğmenin metnini, GraphQL şemasını, renklerini, simgelerini ve aktif olup olmadığını belirleyen değişkenler bulunmaktadır. CustomButton sınıfı aynı zamanda butona tıklandığında tetiklenen dinleyiciyi bulundurmaktadır. Tıklama ile birlikte tetikleyici butonun durumunu değiştirir ve ilgili GraphQL şemasını çalıştırır. 
 
 ButtomControlPanel sınıfı ise pencereyi oluşturur ve GridLayout aracılığı ile düğmeleri pencereye yerleştirir. Bu sınıf ayrıca düğmelerin renkleri ve simgelerini tanımlayan değerleri bulundurur.
+
+# Sonuç
+CustomButtons uygulaması kullanıcı arayüzünde GraphQL kullanmanın basit bir örneği olarak yazılmıştır. Bu uygulamadaki kodları referans olarak kullanarak kendi uygulamanazı yazabilir ve GraphQL'in nasıl çalıştığını anlayabilirsiniz. 
+
+# Ek notlar
+Bu uygulama bir simülasyon olup gerçek bir GraphQL çıktısı yerine konsola bunu temsil eden bir çıktı vermektedir. Butonların aktif veya deaktiflik durumları renkler ve farklı renkli simgelerle temsil edilmektedir.
 

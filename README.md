@@ -9,3 +9,12 @@ GraphQL REST API'leri tarafından döndürülen sabit bir veri kümesiyle çalı
 # CustomButtons nasıl kullanılır?
 Öncelikle, programı başlatmak için 'ButtonControlPanel sınıfındaki main metodu çalıştırın, böylece buton kontrol paneli ekrana gelecektir. Ekranda toplamda 16 buton, 4 satır ve 4 sütun olacak şekilde yerleştirilmiş olacaktır. Bu butonların her biri farklı bir durumu teslim etmekte olup, bir butona tıklandığında durumları değiştirebilirsiniz. Butonlara tıklandığında buton aktif hale gelir ve rengi ile simgesi değişir. İlk tıklanan buton program kapatılana dek aktif olarak kalacakken, diğer butonlar kapatılabilir ve ilk butona tekrar tıklandığında diğer tüm butonları deaktive edecektir. Her bir düğme kendisine özgü bir GraphQL şeması ile ilişkilidir ve düğmeye tıklandığında bu şema çalıştırılır.
 
+# CustomButtons nasıl test edilir?
+Programı test etmek için öncelikle programı çalıştırmanız gerekmektedir. Program açıldığında düğmelere tıklayarak renk ve simgelerinin değişmesini gözlemleyebilirsiniz. Farklı butonlara farklı sıralarla tıklayarak değişimlerini test edebilirsiniz. İlk tıklanan butona tekrar tıklayarak onun yaptığı işlemi, yani diğer düğmeleri deaktive etmesini gözlemleyebilirsiniz. Her bir buton bir GraphQL şeması gösterdiğinden butona basıldığında 'Butona basıldı! GraphQL değişimi uygulanıyor: Değişim<ButonNumarası>' şeklinde bir yazıyı konsolda gözlemleyebilirsiniz.
+
+# CustomButtons kodu nasıl çalışır?
+CustomButtons uygulamasının kodu CustomButton ve ButtonControlPanel isimlik iki sınıftan oluşmaktadır. Temel olarak CustomButton sınıfında sınıf düğmelerinin özellikleri yönetilirken ButtonControlPanel sınıfında bu pencere oluşturulur ve düğmeler eklenir.
+CustomButton sınıfında üğmenin metnini, GraphQL şemasını, renklerini, simgelerini ve aktif olup olmadığını belirleyen değişkenler bulunmaktadır. CustomButton sınıfı aynı zamanda butona tıklandığında tetiklenen dinleyiciyi bulundurmaktadır. Tıklama ile birlikte tetikleyici butonun durumunu değiştirir ve ilgili GraphQL şemasını çalıştırır. 
+
+ButtomControlPanel sınıfı ise pencereyi oluşturur ve GridLayout aracılığı ile düğmeleri pencereye yerleştirir. Bu sınıf ayrıca düğmelerin renkleri ve simgelerini tanımlayan değerleri bulundurur.
+
